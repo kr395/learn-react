@@ -1,0 +1,35 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+html, body {
+  height:100%;
+  width:100%;
+}
+.header{
+  width:100%;
+  background-color:#303030;
+  color:#fff;
+  padding:10px;
+}
+
+.usercard{
+  width:200px;
+  height:200px;
+  border-radius:1rem;
+  background-color: #f7c5c5;
+}
+.topSection{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.pp{
+  border-radius:50%;
+}
+.statusMenu{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
