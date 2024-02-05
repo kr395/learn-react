@@ -1,11 +1,14 @@
 import "./App.css";
+import "./UserGreeting.css";
 import Header from "./Header.jsx";
 import User from "./User.jsx";
+import UserGreeting from "./UserGreeting.jsx"
 
 
 export default function App() {
   return (
     <>
+      <UserGreeting isLoggedIn ={false} username = "Gopal" />
       <Header />
       <User
         imgLink="https://i.pravatar.cc/150?img=54"
