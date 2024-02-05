@@ -3,14 +3,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export default function UserGreeting(props) {
-  // if(props.isLoggedIn){
-  //   return(
-  //     <div>
-  //       <h1>Welcome {props.username}</h1>
-  //       <p>You are logged in</p>
-  //     </div>
-  //   )
-  // }
   return props.isLoggedIn ? (
     <div>
       <h1>Welcome {props.username}</h1>
