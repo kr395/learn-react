@@ -1,3 +1,4 @@
+// to learn Simple Comonent
 const Header = () =>{
   return (
     <div className="header">
