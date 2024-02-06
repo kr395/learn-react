@@ -6,6 +6,7 @@
 html, body {
   height:100%;
   width:100%;
+  font-family: 'Roboto', sans-serif;
 }
 .header{
   width:100%;
@@ -13,7 +14,7 @@ html, body {
   color:#fff;
   padding:10px;
 }
-
+/* Style for User.jsx */
 .usercard{
   width:150px;
   border-radius:10px;
@@ -52,4 +53,30 @@ html, body {
 }
 span{
   margin:2px;
+}
+
+/*Style for List Items  */
+
+.catagory{
+  width:80%;
+  margin:auto;
+  text-align:center;
+  padding:10px;
+  background-color:#c1fbcc;
+  color:#000000;
+  border:2px solid #000000;
+  border-radius:10px;
+}
+.olist{
+  width:80%;
+  margin:auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:5px;
+  padding:5px;
+}
+.olist:hover{
+  background-color:#d4d4d4;
+  border-radius:10px;
 }

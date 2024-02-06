@@ -5,36 +5,34 @@ import PropTypes from "prop-types";
 export default function List(props) {
   const catagory = props.catagory;
   const listItems = props.listItem;
-  listItems.sort((a, b) => {
-    return a.name.localeCompare(b.name);
-  });
-  listItems.sort((a, b) => {
-    return a.pricePerKg - b.pricePerKg;
-  });
+  // listItems.sort((a, b) => {
+  //   return a.name.localeCompare(b.name);
+  // });
+  // listItems.sort((a, b) => {
+  //   return a.pricePerKg - b.pricePerKg;
+  // });
 
-  const lessThan40 = listItems.filter((fruit) => fruit.pricePerKg <= 40);
-  const listItemsList = lessThan40.map((fruit) => {
+  // const lessThan40 = listItems.filter((fruit) => fruit.pricePerKg <= 40);
+  const listItemsList = listItems.map((fruit) => {
     return (
-      <h4 key={fruit.name}>
-        {fruit.name} : {fruit.pricePerKg}/kg
-      </h4>
+      <ol className="olist" key={fruit.id}>
+        {fruit.name.toUpperCase()} : {fruit.pricePerKg}/kg
+      </ol>
     );
   });
   return (
     <>
-      <div className="catagory">{catagory}
-      <ul>{listItemsList}</ul>
-      </div>
-      
+      <h3 className="catagory">{catagory}</h3>
+      {listItemsList}
     </>
   );
 }
-List.defualtProps ={
+List.defualtProps = {
   listItem: [],
   catagory: "",
 };
 
-List.propTypes ={
+List.propTypes = {
   catagory: PropTypes.string,
   listItem: PropTypes.array,
 };
