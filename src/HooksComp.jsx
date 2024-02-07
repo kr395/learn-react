@@ -1,6 +1,7 @@
 // onChange = event handler used primarily with form elements
 // ex. <input>, <textarea>, <select>, <radio>
 // Triggers a function every time the value of the input changes
+// updater function is used to update the state
 import React, {
   useState,
   useEffect,
@@ -10,36 +11,36 @@ import React, {
 } from "react";
 
 export default function HooksComp(props) {
-  // const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
   const [name, setName] = useState("Guest");
   const [payment, setPayment] = useState("Master Card");
   const[deliveryMethod, setDeliveryMethod] = useState("");
   return (
     // Code For Normal Counter
+<>
+    <div>
+      <button onClick={()=>{
+        setCount(c => c + 1) // this is a updater function it's is more efficient way
+        setCount(c => c + 1)
+        setCount(c => c + 1)
+      }}>
+        ➕
+      </button>
+      <p>{count}</p>
+      <button
+        onClick={() => {
+          if (count <= 0) {
+            setCount(0);
+          } else {
+            setCount(count - 1);
+          }
+        }}
+      >
+        ➖
+      </button>
+    </div>
 
-    // <div>
-    //   <button
-    //     onClick={() => {
-    //       setCount(count + 1);
-    //     }}
-    //   >
-    //     ➕
-    //   </button>
-    //   <p>{count}</p>
-    //   <button
-    //     onClick={() => {
-    //       if (count <= 0) {
-    //         setCount(0);
-    //       } else {
-    //         setCount(count - 1);
-    //       }
-    //     }}
-    //   >
-    //     ➖
-    //   </button>
-    // </div>
-
-    // Code for onChange method
+    {/* // Code for onChange method */}
 
     <div>
       <input
@@ -78,5 +79,6 @@ export default function HooksComp(props) {
        
       <p>Your Selected Payment Method is {deliveryMethod}</p>
     </div>
+  </>
   );
 }
